@@ -75,6 +75,25 @@ main(int argc,char* argv[])
                 
     }
     list_printf(listhead);
+
+
+ //特定结点删除
+        if(listdelete_position(listhead,1)){
+            list_printf(listhead);
+         }else
+             printf("delete first position in list failes.\n");
+     
+        if(listdelete_position(listhead,2)){
+             list_printf(listhead);
+        }else
+             printf("delete second position in list failes.\n");
+     
+     
+         if(listdelete_position(listhead,list_length(listhead))){
+             list_printf(listhead);
+         }else
+             printf("delete length position in list failes.\n");
+
     
     return 0;
 }
