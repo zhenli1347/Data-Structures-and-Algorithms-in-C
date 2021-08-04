@@ -145,3 +145,26 @@ listinsert_position(const llink listhead,int position,int item)
 
     return positionpointer;
 }
+
+
+//特定结点删除
+
+ int
+ listdelete_position(const llink listhead,int position)
+  {
+     int length=list_length(listhead);
+      if(position<1||position>length){
+          return false;
+      }
+      llink prevpointer;
+      llink deletepointer;
+  
+      prevpointer=listhead;
+      int i;
+      for(i=0;i<position-1;i++)
+          prevpointer=prevpointer->next;
+      deletepointer=prevpointer->next;
+      prevpointer->next=deletepointer->next;
+      free(deletepointer);
+      return true;
+  }

@@ -17,6 +17,13 @@ llink listinsert_head(const llink listhead,int item);// 链表头部插入 返�
 llink listinsert_tail(const llink listhead,int item);//链表尾部插入  返回值同上
 llink listinsert_position(const llink listhead,int position,int item);//链表特定位置插入
 
+
+//特定结点删除
+ 
+int
+listdelete_position(const llink listhead,int postion);
+
+
 //链表查找
 llink search_list(llink,int);
 
