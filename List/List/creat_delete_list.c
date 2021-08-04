@@ -77,6 +77,13 @@ main(int argc,char* argv[])
     list_printf(listhead);
 
 
+//list search 
+  
+       llink searchp;
+       searchp=list_search(listhead,3);
+       printf("searching 3\n");
+       printf("%p,%p\n",searchp,list_search(listhead,2)->next);
+       printf("%d\n",searchp->vertex);
  //特定结点删除
         if(listdelete_position(listhead,1)){
             list_printf(listhead);

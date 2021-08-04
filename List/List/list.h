@@ -25,7 +25,7 @@ listdelete_position(const llink listhead,int postion);
 
 
 //链表查找
-llink search_list(llink,int);
+llink list_search(llink,int);
 
 
 

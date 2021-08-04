@@ -168,3 +168,24 @@ listinsert_position(const llink listhead,int position,int item)
       free(deletepointer);
       return true;
   }
+
+
+   //链表查找第一个出现的元素
+  
+  llink
+  list_search(const llink listhead,int item)
+  {
+      llink retvalue=NULL;
+  
+      llink itempointer=listhead->next;
+  
+      while(itempointer){
+          if(itempointer->vertex==item){
+              retvalue=itempointer;
+              break;
+          }else
+              itempointer=itempointer->next;
+      }
+  
+      return retvalue;
+  }
